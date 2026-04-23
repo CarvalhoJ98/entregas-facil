@@ -32,6 +32,11 @@ function App() {
     }
   };
 
+  // 🚀 ADICIONADO: Buscar dados no banco assim que a página carrega
+  useEffect(() => {
+    fetchEntregas();
+  }, []);
+
   const handleUpload = async (e) => {
     const uploadedFile = e.target.files[0];
     if (!uploadedFile) return;
