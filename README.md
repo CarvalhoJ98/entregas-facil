@@ -41,18 +41,8 @@ Ana Oliveira,"Rua da Consolação, 1500, São Paulo, SP"
 
 ---
 
-## 🧪 O que você vai aprender aqui?
-
 1.  **Frontend (React):** Como gerenciar estados, fazer chamadas de API com Axios e usar bibliotecas de mapas (Leaflet).
 2.  **Backend (Node.js):** Como criar uma API REST, receber arquivos (Multer) e processar dados.
 3.  **Lógica:** Como calcular distâncias geográficas e ordenar itens por proximidade.
 4.  **Design:** Como usar Tailwind CSS para criar interfaces modernas e limpas.
 
----
-
-## 🚀 Próximos Desafios (Para você evoluir)
-- [ ] Adicionar um banco de dados real (SQLite) para que os dados não sumam ao reiniciar o servidor.
-- [ ] Criar um botão para "Exportar Rota" em PDF ou TXT.
-- [ ] Adicionar suporte para múltiplos entregadores.
-
-Divirta-se codando! 🚀
