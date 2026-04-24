@@ -2,6 +2,14 @@
 
 Bem-vindo ao **Entregas Fácil**! Este é um projeto que desenvolvi para resolver um problema real de logística: a organização de rotas de entrega. O objetivo principal é permitir que o usuário importe uma lista de pedidos (como uma planilha da Shopee ou Mercado Livre) e receba instantaneamente a melhor sequência de paradas, economizando tempo e combustível.
 
+## 📸 Demonstração
+
+![Mapa da Rota](./screenshots/mapa.png)
+*Visualização geográfica da rota otimizada.*
+
+![Lista de Entregas](./screenshots/lista.png)
+*Gestão de status e detalhes das paradas.*
+
 ## 🚀 O que este projeto faz?
 
 O sistema atua como um assistente inteligente para o entregador:
