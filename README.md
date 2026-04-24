@@ -1,48 +1,53 @@
-# 🚚 Entregas Fácil - Sistema de Roteirização
+# 🚚 Entregas Fácil - Otimizador de Rotas Logísticas
 
-Bem-vindo ao seu projeto de estudo! Este sistema ajuda entregadores a organizar seus pedidos de forma inteligente, usando geolocalização para sugerir a melhor rota.
+Bem-vindo ao **Entregas Fácil**! Este é um projeto que desenvolvi para resolver um problema real de logística: a organização de rotas de entrega. O objetivo principal é permitir que o usuário importe uma lista de pedidos (como uma planilha da Shopee ou Mercado Livre) e receba instantaneamente a melhor sequência de paradas, economizando tempo e combustível.
 
-## 🛠 Como rodar o projeto
+## 🚀 O que este projeto faz?
 
-Como você está em transição de carreira, aqui está o passo a passo para colocar tudo para funcionar:
+O sistema atua como um assistente inteligente para o entregador:
+1.  **Importação Flexível:** Aceita arquivos CSV e Excel com nomes e endereços dos clientes.
+2.  **Geocodificação Automática:** Utilizo a API do OpenStreetMap (Nominatim) para transformar endereços escritos em coordenadas geográficas (Latitude/Longitude).
+3.  **Algoritmo de Roteirização:** Implementei o algoritmo do **Vizinho Mais Próximo** (*Nearest Neighbor*). O sistema calcula a distância entre os pontos e sugere a parada mais próxima a partir da base ou da última entrega realizada.
+4.  **Mapa Interativo:** Exibição visual da rota completa e dos pontos de entrega usando Leaflet.
+5.  **Gestão de Entregas:** Interface para acompanhar o progresso e marcar entregas como concluídas em tempo real.
 
-### 1. Instale o Node.js
-Se ainda não tem, baixe e instale a versão LTS no site oficial: [nodejs.org](https://nodejs.org/).
+## 🛠 Tecnologias Utilizadas
 
-### 2. Prepare o Backend
-Abra o terminal na pasta `backend` e rode:
+### Frontend
+- **React.js**: Para uma interface rápida e reativa.
+- **Tailwind CSS**: Estilização moderna com foco em usabilidade.
+- **Leaflet & React Leaflet**: Para manipulação de mapas e geoprocessamento.
+- **Lucide React**: Biblioteca de ícones profissionais.
+
+### Backend
+- **Node.js & Express**: Servidor robusto para processamento de dados.
+- **SQLite**: Banco de dados leve e eficiente para persistência local.
+- **Multer**: Gerenciamento de upload de arquivos.
+- **Docker**: Containerização para garantir que o projeto rode em qualquer ambiente.
+
+## 📦 Como Rodar o Projeto
+
+### Usando Docker (Recomendado)
+Para rodar a aplicação completa (Frontend + Backend + Banco de Dados) com apenas um comando:
 ```bash
-npm install
-npm run dev
+docker-compose up --build
 ```
-O servidor vai rodar em `http://localhost:3001`.
+Acesse o sistema em: `http://localhost:5173`
 
-### 3. Prepare o Frontend
-Abra outro terminal na pasta `frontend` e rode:
-```bash
-npm install
-npm run dev
-```
-O app vai abrir em `http://localhost:5173`.
+### Rodando Localmente
+1.  **Backend:** Entre na pasta `backend`, rode `npm install` e depois `npm run dev`.
+2.  **Frontend:** Entre na pasta `frontend`, rode `npm install` e depois `npm run dev`.
 
 ---
 
-## 📄 Arquivo de Exemplo para Teste
-
-Você pode criar um arquivo chamado `teste.csv` com o seguinte conteúdo para testar o sistema agora mesmo:
+## 📄 Exemplo de Arquivo de Teste
+Para testar o sistema, você pode usar um arquivo `.csv` com o seguinte formato:
 
 ```csv
 destinatario,endereco_completo
-Joao Silva,"Avenida Paulista, 1000, São Paulo, SP"
+João Silva,"Avenida Paulista, 1000, São Paulo, SP"
 Maria Souza,"Rua Augusta, 500, São Paulo, SP"
-Carlos Lima,"Rua Oscar Freire, 200, São Paulo, SP"
-Ana Oliveira,"Rua da Consolação, 1500, São Paulo, SP"
 ```
 
 ---
-
-1.  **Frontend (React):** Como gerenciar estados, fazer chamadas de API com Axios e usar bibliotecas de mapas (Leaflet).
-2.  **Backend (Node.js):** Como criar uma API REST, receber arquivos (Multer) e processar dados.
-3.  **Lógica:** Como calcular distâncias geográficas e ordenar itens por proximidade.
-4.  **Design:** Como usar Tailwind CSS para criar interfaces modernas e limpas.
-
+*Este projeto foi desenvolvido com foco em aprendizado de algoritmos de geolocalização e arquitetura fullstack.* 🚀

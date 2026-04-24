@@ -6,3 +6,6 @@ uploads/
 .DS_Store
 .vscode/
 package-lock.json
+*.sqlite
+data/
+backend/database.sqlite
